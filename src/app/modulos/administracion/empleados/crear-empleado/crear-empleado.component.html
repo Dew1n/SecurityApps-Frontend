@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+<div class="row">
+    <h3 class="center-align">Crear Empleado</h3>
+    <article  class="col s12">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarEmpleado()" method="POST" action="formulario-contacto.php">
+        <div class="input-field col s6">
+            <label for="nombres">Nombres</label>
+          <input formControlName="nombres" id="nombres" type="text" required>
+        </div>
+        <div class="input-field col s6">
+            <label for="apellidos">Apellidos</label>
+          <input formControlName="apellidos" id="apellidos" type="text" required>
+        </div>
+        <div class="input-field col s3">
+            <label for="telefono">Telefono</label>
+          <input formControlName="telefono" id="telefono" type="text" required>
+        </div>
+        <div class="input-field col s9">
+            <label for="direccion">Direccion</label>
+          <input formControlName="direccion" id="direccion" type="text" required>
+        </div>
+        <div class="input-field col s8">
+            <label for="email">Email</label>
+          <input formControlName="email" id="email" type="email" required>
+        </div>
+        <div class="input-field col s4">
+            <label for="edad">Edad</label>
+            <input formControlName="edad" id="edad" type="text" required>
+          </div>
+
+        <div class="input-field col s4">
+            <input formControlName="fechaNacimiento" type="date" id="fechaNacimiento" class="form-control" required>
+            <label for="fechaNacimiento">Fecha Nacimiento</label>
+        </div>
+        <div class="input-field col s4">
+            <label for="sueldo">Sueldo</label>
+          <input formControlName="sueldo" id="sueldo" type="text" required>
+        </div>
+        <div class="input-field col s4">
+            <label for="esDirectivo">esDirectivo</label>
+            <input formControlName="esDirectivo" id="esDirectivo" type="text" required>
+          </div>
+      <p class="center-align">
+                  <button [disabled]="fgValidador" class="waves-effect waves-light btn" type="submit"><i
+                class="material-icons right">send</i>enviar</button>
+              </p>
+    </form>
+    </article>
+</div>
+        
+    
+
