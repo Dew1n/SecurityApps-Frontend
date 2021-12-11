@@ -1,4 +1,6 @@
-<a routerLink="/administracion/crear-cliente" class="btn">Nuevo Cliente</a>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<button routerLink="/administracion/crear-cliente" class="waves-effect waves-light btn"><i
+    class="material-icons right">add</i>Crear Cliente</button>
 <table class="table resposive">
     <thead>
         <tr>
@@ -23,6 +25,13 @@
             <th>
                 fechaNacimiento
             </th>
+            <th>
+                Editar
+            </th>
+            <th>
+                Eliminar
+            </th>
+            
     </tr>
     </thead>
     <tbody>
@@ -49,10 +58,12 @@
                 {{p.fechaNacimiento}}
             </td>
             <td>
-                <a routerLink="/administracion/editar-cliente/{{p.id}}" class="btn">Editar Cliente</a>
+                <button routerLink="/administracion/editar-cliente/{{p.id}}" class="waves-effect waves-light btn"><i
+                    class="material-icons right">edit</i>Editar</button>
             </td>
             <td>
-                <a routerLink="/administracion/eliminar-cliente/{{p.id}}" class="btn">Eliminar Cliente</a>
+                <button routerLink="/administracion/eliminar-cliente/{{p.id}}" class="waves-effect waves-light btn"><i
+                    class="material-icons right">delete</i>Eliminar</button>
             </td>
         </tr>
     </tbody>

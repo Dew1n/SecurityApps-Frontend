@@ -5,44 +5,44 @@
     <article  class="col s12">
       <form [formGroup]="fgValidador" (ngSubmit)="EditarEmpleado()" method="POST" action="formulario-contacto.php">
           <input type="hidden" formControlName="id" />
-          <div class="input-field col s6">
+          <div class="col s6">
               <label for="nombres" class="activate">Nombres</label>
             <input formControlName="nombres" type="text" name="nombres" required>
           </div>
-          <div class="input-field col s6">
+          <div class="col s6">
               <label for="apellidos"class="activate">Apellidos</label>
             <input formControlName="apellidos" type="text" name="apellidos" required>
           </div>
-          <div class="input-field col s3">
+          <div class="col s3">
               <label for="telefono" class="activate">Telefono</label>
             <input formControlName="telefono" type="text" name="telefono" equired>
           </div>
-          <div class="input-field col s9">
+          <div class="col s9">
               <label for="direccion" class="activate">Direccion</label>
             <input formControlName="direccion" type="text" name="direccion" required>
           </div>
-          <div class="input-field col s8">
+          <div class="col s8">
               <label for="email" class="activate">Email</label>
             <input formControlName="email" type="text" name="email" required>
           </div>
-          <div class="input-field col s4">
+          <div class="col s4">
               <label for="edad" class="activate">Edad</label>
               <input formControlName="edad" type="text" name="edad" required>
             </div>
 
-          <div class="input-field col s6">
-              <input formControlName="fechaNacimiento" type="text" name="fechaNacimiento" class="form-control" required>
+          <div class="col s6">
               <label for="fechaNacimiento" class="activate">Fecha Nacimiento</label>
+              <input formControlName="fechaNacimiento" type="text" name="fechaNacimiento" class="form-control" required>
           </div>
-          <div class="input-field col s6">
+          <div class="col s6">
               <label for="sueldo" class="activate">Sueldo</label>
             <input formControlName="sueldo" type="text" name="sueldo" required>
           </div>
-          <div class="input-field col s6">
+          <div class="col s6">
               <label for="esDirectivo" class="activate">esDirectivo</label>
               <input formControlName="esDirectivo" type="text" name="esDirectivo" required>
             </div>
-            <div class="input-field col s6">
+            <div class="col s6">
               <label for="empresaId" class="activate">empresaId</label>
               <input formControlName="empresaId" type="text" name="empresaId" required>
             </div>
