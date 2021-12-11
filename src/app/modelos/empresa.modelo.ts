@@ -1,5 +1,5 @@
 export class ModeloEmpresa{
-    id?: String;
+    id?: string;
     razonSocial?: string;
     nit?: string;
 }

@@ -1,12 +1,12 @@
 <div class="card-panel teal lighten-2">
 <nav>
     <div class="nav-wrapper">
-      <a routerLink="/inicio" class="brand-logo">SecurityApps</a>
+      <a routerLink="/inicio" class="brand-logo"><img src="https://i.ibb.co/6Hg84sq/Whats-App-Image-2021-10-04-at-8-40-39-PM.jpg" alt="Logo Security Apps" style="width:100px;height:65px;"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empresa">Empresa</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empleado">Empleados</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Clientes</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-cliente">Clientes</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/CambioClave">Cambiar Clave</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar sesion</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Login</a></li>
@@ -17,7 +17,7 @@
   <ul class="sidenav" id="mobile-demo">
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empresa">Empresa</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-empleado">Empleados</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Clientes</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-cliente">Clientes</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/seguridad/CambioClave">Cambiar Clave</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar sesion</a></li>
     <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Login</a></li>

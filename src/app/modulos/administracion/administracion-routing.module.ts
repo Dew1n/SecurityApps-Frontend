@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
@@ -16,59 +17,78 @@ import { EliminarEmpresaComponent } from './empresa/eliminar-empresa/eliminar-em
 const routes: Routes = [
   {
     path: 'listar-empresa',
-    component: BuscarEmpresaComponent
+    component: BuscarEmpresaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'crear-empresa',
-    component: CrearEmpresaComponent
+    component: CrearEmpresaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-empresa/:id',
-    component: EditarEmpresaComponent
+    component: EditarEmpresaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
-    path: 'eliminar-empresa',
-    component: EliminarEmpresaComponent
+    path: 'eliminar-empresa/:id',
+    component: EliminarEmpresaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'buscar-empresa',
-    component: BuscarEmpresaComponent
+    component: BuscarEmpresaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'listar-empleado',
-    component: BuscarEmpleadoComponent
+    component: BuscarEmpleadoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'crear-empleado',
-    component: CrearEmpleadoComponent
+    component: CrearEmpleadoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-empleado/:id',
-    component: EditarEmpleadoComponent
+    component: EditarEmpleadoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
-    path: 'eliminar-empleado',
-    component: EliminarEmpleadoComponent
+    path: 'eliminar-empleado/:id',
+    component: EliminarEmpleadoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'buscar-empleado',
-    component: BuscarEmpleadoComponent
+    component: BuscarEmpleadoComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path: 'listar-cliente',
+    component: BuscarClienteComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'crear-cliente',
-    component: CrearClienteComponent
+    component: CrearClienteComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
-    path: 'editar-cliente',
-    component: EditarClienteComponent
+    path: 'editar-cliente/:id',
+    component: EditarClienteComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
-    path: 'eliminar-cliente',
-    component: EliminarClienteComponent
+    path: 'eliminar-cliente/:id',
+    component: EliminarClienteComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'buscar-cliente',
-    component: BuscarClienteComponent
+    component: BuscarClienteComponent,
+    canActivate: [ValidadorSesionGuard]
   }
 ];
 

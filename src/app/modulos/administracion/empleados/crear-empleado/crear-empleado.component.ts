@@ -21,6 +21,7 @@ export class CrearEmpleadoComponent implements OnInit {
     'fechaNacimiento': ['', [Validators.required]],
     'sueldo': ['', [Validators.required]],
     'esDirectivo': ['', [Validators.required]],
+    'empresaId': ['', [Validators.required]],
   });
 
   constructor(private fb: FormBuilder,
@@ -39,6 +40,7 @@ export class CrearEmpleadoComponent implements OnInit {
     let fechaNacimiento= this.fgValidador.controls["fechaNacimiento"].value;
     let sueldo = this.fgValidador.controls["sueldo"].value;
     let esDirectivo = this.fgValidador.controls["esDirectivo"].value;
+    let empresaId = this.fgValidador.controls["empresaId"].value;
     let p = new ModeloEmpleado();
     p.nombres = nombres;
     p.apellidos = apellidos;
@@ -49,6 +51,7 @@ export class CrearEmpleadoComponent implements OnInit {
     p.fechaNacimiento = fechaNacimiento;
     p.sueldo = sueldo;
     p.esDirectivo = esDirectivo;
+    p.empresaId = empresaId;
     this.servicioEmpleado.CrearEmpleado(p).subscribe((datos: ModeloEmpleado) => {
       alert("Empleado Guardado");
       this.router.navigate(["/administracion/listar-empleado"]);

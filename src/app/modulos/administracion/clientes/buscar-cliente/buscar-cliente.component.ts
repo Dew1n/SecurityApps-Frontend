@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModeloCliente } from 'src/app/modelos/cliente.modelo';
+import { ClienteService } from 'src/app/servicios/cliente.service';
+
 
 @Component({
   selector: 'app-buscar-cliente',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarClienteComponent implements OnInit {
 
-  constructor() { }
+  listadoClientes: ModeloCliente[] = [];
+  constructor(private clienteServicio: ClienteService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoCliente();
+  }
+
+  ObtenerListadoCliente(){
+    this.clienteServicio.ObtenerClientes().subscribe((datos: ModeloCliente[]) => {
+      this.listadoClientes = datos;
+    })
   }
 
 }

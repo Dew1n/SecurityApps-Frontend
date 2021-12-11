@@ -18,7 +18,7 @@ export class EmpresaService {
   ObtenerReistros(): Observable<ModeloEmpresa[]>{
     return this.http.get<ModeloEmpresa[]>(`${this.url}/empresas`);
   }
-  ObtenerReistrosPorId(id: String): Observable<ModeloEmpresa>{
+  ObtenerReistrosPorId(id: string): Observable<ModeloEmpresa>{
     return this.http.get<ModeloEmpresa>(`${this.url}/empresas/${id}`);
   }
 
@@ -31,7 +31,7 @@ export class EmpresaService {
   }
 
   ActualizarEmpresa(empresa: ModeloEmpresa): Observable<ModeloEmpresa>{
-    return this.http.put<ModeloEmpresa>(`${this.url}/empresas${empresa.id}`, empresa,{
+    return this.http.put<ModeloEmpresa>(`${this.url}/empresas/${empresa.id}`, empresa,{
       headers: new HttpHeaders({
         'authorization': `Bearer ${this.token}`
       })

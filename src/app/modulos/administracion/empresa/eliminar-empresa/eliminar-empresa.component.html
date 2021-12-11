@@ -1,1 +1,22 @@
-<p>eliminar-empresa works!</p>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <div class="row">
+      <h3 class="center-align">Eliminar Empresa</h3>
+      <article class="col s6 offset-s3">
+          <form [formGroup]="fgValidador" (ngSubmit)="EliminarEmpresa()" method="POST" action="formulario-contacto.php">
+              <input type="hidden" formControlName="id"/>
+              <div class="input-field">
+                  <label for="razonSolcial" class="active">RazonSocial</label>
+                  <input formControlName="razonSocial" type="text" name="razonSocial" required>
+              </div>
+
+              <div class="input-field">
+                  <label for="nit" class="active">Nit</label>
+                  <input formControlName="nit" type="text" name="nit" required>
+              </div>
+              <p class="center-align">
+                  <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i
+                class="material-icons right">delete</i>Eliminar Empresa</button>
+              </p>
+          </form>
+      </article>
+  </div>

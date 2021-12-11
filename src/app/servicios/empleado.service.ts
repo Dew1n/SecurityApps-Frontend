@@ -18,7 +18,7 @@ export class EmpleadoService {
   ObtenerEmpleados(): Observable<ModeloEmpleado[]>{
     return this.http.get<ModeloEmpleado[]>(`${this.url}/empleados`);
   }
-  ObtenerEmpleadoPorId(id: String): Observable<ModeloEmpleado>{
+  ObtenerEmpleadoPorId(id: string): Observable<ModeloEmpleado>{
     return this.http.get<ModeloEmpleado>(`${this.url}/empleados/${id}`);
   }
 
@@ -31,7 +31,7 @@ export class EmpleadoService {
   }
 
   ActualizarEmpleado(empleado: ModeloEmpleado): Observable<ModeloEmpleado>{
-    return this.http.put<ModeloEmpleado>(`${this.url}/empleados${empleado.id}`, empleado,{
+    return this.http.put<ModeloEmpleado>(`${this.url}/empleados/${empleado.id}`, empleado,{
       headers: new HttpHeaders({
         'authorization': `Bearer ${this.token}`
       })

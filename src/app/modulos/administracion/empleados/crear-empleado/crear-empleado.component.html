@@ -3,49 +3,53 @@
 <div class="row">
     <h3 class="center-align">Crear Empleado</h3>
     <article  class="col s12">
-    <form [formGroup]="fgValidador" (ngSubmit)="GuardarEmpleado()" method="POST" action="formulario-contacto.php">
-        <div class="input-field col s6">
-            <label for="nombres">Nombres</label>
-          <input formControlName="nombres" id="nombres" type="text" required>
-        </div>
-        <div class="input-field col s6">
-            <label for="apellidos">Apellidos</label>
-          <input formControlName="apellidos" id="apellidos" type="text" required>
-        </div>
-        <div class="input-field col s3">
-            <label for="telefono">Telefono</label>
-          <input formControlName="telefono" id="telefono" type="text" required>
-        </div>
-        <div class="input-field col s9">
-            <label for="direccion">Direccion</label>
-          <input formControlName="direccion" id="direccion" type="text" required>
-        </div>
-        <div class="input-field col s8">
-            <label for="email">Email</label>
-          <input formControlName="email" id="email" type="email" required>
-        </div>
-        <div class="input-field col s4">
-            <label for="edad">Edad</label>
-            <input formControlName="edad" id="edad" type="text" required>
+      <form [formGroup]="fgValidador" (ngSubmit)="GuardarEmpleado()" method="POST" action="formulario-contacto.php">
+          <div class="input-field col s6">
+              <label for="nombres">Nombres</label>
+            <input formControlName="nombres" type="text" name="nombres" required>
           </div>
+          <div class="input-field col s6">
+              <label for="apellidos">Apellidos</label>
+            <input formControlName="apellidos" type="text" name="apellidos" required>
+          </div>
+          <div class="input-field col s3">
+              <label for="telefono">Telefono</label>
+            <input formControlName="telefono" type="text" name="telefono" equired>
+          </div>
+          <div class="input-field col s9">
+              <label for="direccion">Direccion</label>
+            <input formControlName="direccion" type="text" name="direccion" required>
+          </div>
+          <div class="input-field col s8">
+              <label for="email">Email</label>
+            <input formControlName="email" type="text" name="email" required>
+          </div>
+          <div class="input-field col s4">
+              <label for="edad">Edad</label>
+              <input formControlName="edad" type="text" name="edad" required>
+            </div>
 
-        <div class="input-field col s4">
-            <input formControlName="fechaNacimiento" type="date" id="fechaNacimiento" class="form-control" required>
-            <label for="fechaNacimiento">Fecha Nacimiento</label>
-        </div>
-        <div class="input-field col s4">
-            <label for="sueldo">Sueldo</label>
-          <input formControlName="sueldo" id="sueldo" type="text" required>
-        </div>
-        <div class="input-field col s4">
-            <label for="esDirectivo">esDirectivo</label>
-            <input formControlName="esDirectivo" id="esDirectivo" type="text" required>
+          <div class="input-field col s6">
+              <input formControlName="fechaNacimiento" type="text" name="fechaNacimiento" class="form-control" required>
+              <label for="fechaNacimiento">Fecha Nacimiento</label>
           </div>
-      <p class="center-align">
-                  <button [disabled]="fgValidador" class="waves-effect waves-light btn" type="submit"><i
-                class="material-icons right">send</i>enviar</button>
-              </p>
-    </form>
+          <div class="input-field col s6">
+              <label for="sueldo">Sueldo</label>
+            <input formControlName="sueldo" type="text" name="sueldo" required>
+          </div>
+          <div class="input-field col s6">
+              <label for="esDirectivo">esDirectivo</label>
+              <input formControlName="esDirectivo" type="text" name="esDirectivo" required>
+            </div>
+            <div class="input-field col s6">
+              <label for="empresaId">empresaId</label>
+              <input formControlName="empresaId" type="text" name="empresaId" required>
+            </div>
+          <p class="center-align">
+            <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i
+            class="material-icons right">add</i>Crear empleado</button>
+          </p>
+      </form>
     </article>
 </div>
         

@@ -10,7 +10,7 @@ import { EmpresaService } from 'src/app/servicios/empresa.service';
   styleUrls: ['./editar-empresa.component.css']
 })
 export class EditarEmpresaComponent implements OnInit {
-  id: String = '';
+  id: string = '';
   fgValidador: FormGroup = this.fb.group({
     'id': ['', [Validators.required]],
     'razonSocial': ['', [Validators.required]],
@@ -30,7 +30,7 @@ export class EditarEmpresaComponent implements OnInit {
       this.fgValidador.controls["id"].setValue(this.id);
       this.fgValidador.controls["razonSocial"].setValue(datos.razonSocial);
       this.fgValidador.controls["nit"].setValue(datos.nit);
-    })
+    });
   }
 
   EditarEmpresa(){
@@ -41,8 +41,8 @@ export class EditarEmpresaComponent implements OnInit {
     p.nit = nit;
     p.id = this.id;
     this.servicioEmpresa.ActualizarEmpresa(p).subscribe((datos: ModeloEmpresa) => {
-      alert("Empresa Actualizada");
-      this.router.navigate(["/administracion/listar-empresa"]);
+    alert("Empresa Actualizada");
+    this.router.navigate(["/administracion/listar-empresa"]);
     }, (error: any) => {
       alert ("Error actualizando la empresa");
     })

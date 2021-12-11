@@ -1,1 +1,46 @@
-<p>crear-cliente works!</p>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+<div class="row">
+    <h3 class="center-align">Crear Cliente</h3>
+    <article  class="col s12">
+      <form [formGroup]="fgValidador" (ngSubmit)="GuardarCliente()" method="POST" action="formulario-contacto.php">
+          <div class="input-field col s6">
+              <label for="nombres">Nombres</label>
+            <input formControlName="nombres" type="text" name="nombres" required>
+          </div>
+          <div class="input-field col s6">
+              <label for="apellidos">Apellidos</label>
+            <input formControlName="apellidos" type="text" name="apellidos" required>
+          </div>
+          <div class="input-field col s3">
+              <label for="telefono">Telefono</label>
+            <input formControlName="telefono" type="text" name="telefono" equired>
+          </div>
+          <div class="input-field col s9">
+              <label for="direccion">Direccion</label>
+            <input formControlName="direccion" type="text" name="direccion" required>
+          </div>
+          <div class="input-field col s8">
+              <label for="email">Email</label>
+            <input formControlName="email" type="text" name="email" required>
+          </div>
+          <div class="input-field col s4">
+              <label for="edad">Edad</label>
+              <input formControlName="edad" type="text" name="edad" required>
+            </div>
+
+          <div class="input-field col s5">
+              <input formControlName="fechaNacimiento" type="text" name="fechaNacimiento" class="form-control" required>
+              <label for="fechaNacimiento">Fecha Nacimiento</label>
+          </div>
+          <div class="input-field col s7">
+            <label for="empresaId">EmpresaId</label>
+            <input formControlName="empresaId" type="text" name="empresaId" required>
+          </div>
+          <p class="center-align">
+            <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i
+            class="material-icons right">add</i>Crear Cliente</button>
+          </p>
+      </form>
+    </article>
+</div>
